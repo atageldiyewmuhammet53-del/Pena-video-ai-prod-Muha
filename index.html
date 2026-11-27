@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PENA VIDEO AI PRO</title>
+<style>
+*{box-sizing:border-box}
+body{
+ background:#080b14;
+ color:white;
+ font-family:Arial,sans-serif;
+ margin:0;
+}
+header{
+ padding:25px;
+ text-align:center;
+ background:#111827;
+ border-bottom:1px solid #333;
+}
+h1{color:#a78bfa;font-size:26px}
+main{
+ max-width:800px;
+ margin:auto;
+ padding:20px;
+}
+.panel{
+ background:#151b2b;
+ padding:20px;
+ border-radius:18px;
+ margin-bottom:15px;
+}
+input,select,textarea,button{
+ width:100%;
+ padding:14px;
+ margin:10px 0;
+ border:1px solid #374151;
+ border-radius:10px;
+ background:#090e1a;
+ color:white;
+ font-size:16px;
+}
+textarea{height:130px}
+button{
+ background:linear-gradient(90deg,#7c3aed,#2563eb);
+ font-weight:bold;
+ border:none;
+ cursor:pointer;
+}
+label{color:#c4b5fd}
+footer{
+ text-align:center;
+ color:#888;
+ padding:20px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>PENA VIDEO AI PRO</h1>
+<p>Professional AI Video Generator</p>
+</header>
+
+<main>
+<div class="panel">
+
+<label>AI Video Mode</label>
+<select id="mode">
+<option>Image to Video</option>
+<option>Text to Video</option>
+<option>Video to Video</option>
+<option>Earth Zoom</option>
+<option>360 Camera</option>
+<option>AI Transition</option>
+<option>Cinematic Wedding</option>
+</select>
+
+<label>Start Frame</label>
+<input type="file" accept="image/*">
+
+<label>End Frame</label>
+<input type="file" accept="image/*">
+
+<label>Video Reference</label>
+<input type="file" accept="video/*">
+
+<label>Prompt</label>
+<textarea placeholder="Describe your cinematic video..."></textarea>
+
+<label>Resolution</label>
+<select>
+<option>720p HD</option>
+<option>480p</option>
+</select>
+
+<label>Duration</label>
+<select>
+<option>15 Seconds</option>
+<option>10 Seconds</option>
+<option>5 Seconds</option>
+</select>
+
+<label>FPS</label>
+<select>
+<option>24 FPS</option>
+<option>30 FPS</option>
+</select>
+
+<button onclick="generateVideo()">
+GENERATE VIDEO
+</button>
+
+<p id="status">AI Engine: Not connected</p>
+
+</div>
+
+<div class="panel">
+<h3>Generated Videos</h3>
+<p>No videos generated yet.</p>
+</div>
+
+</main>
+
+<footer>
+PENA VIDEO AI PRO © 2026
+</footer>
+
+<script>
+function generateVideo(){
+ document.getElementById("status").innerText =
+ "AI Engine is not connected yet.";
+}
+</script>
+
+</body>
+  </html>
